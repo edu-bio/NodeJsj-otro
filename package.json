@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-otro",
+  "version": "1.0.0",
+  "description": "comunicación entre este microservicio y el de nodejs-express. Este hace llamada al otro.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edu-bio/NodeJsj-otro.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "edu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edu-bio/NodeJsj-otro/issues"
+  },
+  "homepage": "https://github.com/edu-bio/NodeJsj-otro#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
