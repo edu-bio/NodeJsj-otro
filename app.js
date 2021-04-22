@@ -19,7 +19,9 @@ app.get('/books', function(req, res) {
 	}, function (error, response, body) {
 
 	    if (!error && response.statusCode === 200) {
-	    	// Pintamos la respuesta JSON en navegador.
+	    	// Pintamos la respuesta JSON en navegador.    
+ 			res.setHeader("Content-Type", "application/json");
+
 	        res.send(body) 
 	    }
 	})
