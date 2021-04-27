@@ -24,6 +24,7 @@ app.get('/books', function(req, res) {
 	        res.send(body) 
 	    }
 	})
+
 });
  
 //GET http://localhost:3002/books/3
@@ -38,6 +39,7 @@ app.get('/books/:id', function(req, res) {
 
 	    if (!error && response.statusCode === 200) {
 	    	// Pintamos la respuesta JSON en navegador.
+			res.setHeader("Content-Type", "application/json");
 	        res.send(body) 
 	    }
 	})
