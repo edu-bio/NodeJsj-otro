@@ -1,14 +1,13 @@
 
-var express 	= require("express"); 
-var app 	= express();
-var bodyParser 	= require('body-parser');
+const express 	= require("express"); 
+const app 	= express();
 var request 	= require("request");
 
 // URL con contenido JSON
 var url = "http://localhost:3001/libros/"
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); 
  
 //GET http://localhost:3002/books
 // Consumimos datos de la URL
