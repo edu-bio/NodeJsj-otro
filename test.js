@@ -1,7 +1,7 @@
-
-test('probando metodo get', () => {
+test('probando metodos get', () => {
     const expect = "[{\"id\":1,\"isbn\":1,\"titulo\":\"La comunidad del anillo\"}]"
-    const result =     
+    const result =  ()=>
+    
         request({
             url: "http://localhost:3001/libros/1",
             json: false
@@ -9,13 +9,13 @@ test('probando metodo get', () => {
     
             if (!error && response.statusCode === 200) {
                 // Pintamos la respuesta JSON en navegador.
-                res.setHeader("Content-Type", "application/json");
-                res.send(body) 
+               res.setHeader("Content-Type", "application/json");
+               return res.send(body) 
             }
         })
     
     console.log(expect);
     console.log(result);
-    expect(result).toBe(expect)
+    expect(result).toEqual(expect)
     
 })
